@@ -12,6 +12,7 @@ export class AppComponent {
 
   transferir($event) {
     console.log($event);
-    this.transferencias.push($event);
+    const transferencia = {...$event, data : new Date()};
+    this.transferencias.push(transferencia);
   }
 }
